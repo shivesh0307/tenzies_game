@@ -68,7 +68,10 @@ function holdDice(id)
 const diceElements = dice.map(item => <Dice value={item.value} key={item.id} id={item.id}
   isHeld={item.isHeld}  holdDice={holdDice}
   />)
-  
+  function newGame()
+  {
+    window. location. reload();
+  }
 
   return (
     <main>
@@ -80,7 +83,7 @@ const diceElements = dice.map(item => <Dice value={item.value} key={item.id} id=
     {diceElements}
     {/*dice.map(item => <Dice value={item} />)*/}
     </div>
-    <button className="roll-dice" onClick={rollDice}>
+    <button className="roll-dice" onClick={tenzies? newGame : rollDice}>
       {tenzies ? "New Game" : "Roll"}
       </button>
     </main>
