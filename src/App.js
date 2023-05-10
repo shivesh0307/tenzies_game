@@ -70,7 +70,9 @@ const diceElements = dice.map(item => <Dice value={item.value} key={item.id} id=
   />)
   function newGame()
   {
-    window. location. reload();
+    //window. location. reload();
+    setTenzies(false)
+    setDice(allNewDice())
   }
 
   return (
